@@ -1,72 +1,95 @@
 {
-  "checked_at": "2026-11-05T22:36:45.128282+09:00",
-  "browser": "Chromium via Codex in-app browser; native Chrome screenshots",
+  "revision": "v2",
+  "checked_at": "2026-11-05T23:51:17.041227+09:00",
+  "browser": "Chrome via connected browser; CSS viewport validation",
   "viewports": [
     {
-      "width": 320,
-      "height": 740,
-      "horizontal_overflow": false,
-      "broken_images": 0
+      "width": 430,
+      "height": 932,
+      "available_after_header_and_dock": 806,
+      "all_seven_default_sections_fit": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 430,
+      "height": 800,
+      "available_after_header_and_dock": 674,
+      "all_seven_default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
       "width": 393,
-      "height": 852,
-      "horizontal_overflow": false,
-      "broken_images": 0
+      "height": 700,
+      "available_after_header_and_dock": 574,
+      "all_seven_default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
-      "width": 768,
-      "height": 1024,
-      "horizontal_overflow": false,
-      "broken_images": 0
+      "width": 375,
+      "height": 667,
+      "available_after_header_and_dock": 541,
+      "all_seven_default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
-      "width": 1024,
-      "height": 768,
-      "horizontal_overflow": false,
-      "broken_images": 0
+      "width": 320,
+      "height": 568,
+      "available_after_header_and_dock": 442,
+      "all_seven_default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
       "width": 1440,
       "height": 900,
-      "horizontal_overflow": false,
-      "broken_images": 0
+      "available_after_header_and_dock": 812,
+      "all_seven_default_sections_fit": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "available_after_header_and_dock": 632,
+      "all_seven_default_sections_fit": true,
+      "horizontal_overflow": false
     }
   ],
   "functional_checks": {
-    "five_distinct_situation_panels": "passed",
-    "keyboard_tab_home_selection": "passed",
-    "context_to_memo": "passed: property topic and family discussion stage",
-    "copy_memo": "passed: browser success state",
-    "download_memo": "passed: actual UTF-8 text file readback",
-    "office_carousel": "passed: 01/04 to 02/04",
-    "mobile_menu": "passed: opens and closes after navigation",
-    "faq": "passed: deadline question expanded",
-    "console_errors": 0,
-    "local_sources": "all present",
-    "duplicate_ids": 0,
-    "broken_anchors": 0,
-    "h1_count": 1
+    "three_keyword_tabs": "distinct guidance and CTA",
+    "mobile_header_hero_and_contextual_ctas": "navigate to free consultation form",
+    "expert_profiles": "three large PC photos; mobile three-name tabs",
+    "four_process_steps": "four distinct explanations on selection",
+    "cost_and_faq": "dialog opens and closes without growing section",
+    "original_six_fields": "same labels, order, free input, all required",
+    "privacy_consent": "unchecked by default, required",
+    "server_validation_and_recovery_compatibility": "passed",
+    "live_submission": "browser success and six-field Google Sheets readback verified",
+    "duplicate_retry": "live duplicate=true with same lead ID, no extra write",
+    "mail_notifications_added": false
   },
-  "external_channels": {
-    "kakao": "Opens official Kakao login with correct channel chat continuation; no chat sent",
-    "naver_booking": "Opens configured official Naver Maps place booking route; no booking submitted",
-    "phone": "tel:050714146860"
-  },
-  "preview": {
-    "url": "https://studioduggubi.github.io/haeram-inheritance/",
-    "http_status": 200,
-    "noindex": true,
-    "existing_domains_changed": false
+  "static_checks": {
+    "duplicate_ids": [],
+    "broken_anchors": [],
+    "missing_local_sources": [],
+    "h1_count": 1,
+    "location_mentions": 0,
+    "keywords": {
+      "한정승인": 21,
+      "상속포기": 22,
+      "상속등기": 20
+    }
   },
   "screenshots": [
-    "qa/desktop-1440.png",
-    "qa/mobile-393.png",
-    "qa/desktop-preview.jpg",
-    "qa/mobile-preview.jpg"
+    "qa/haeram-v2-pc-hero.jpg",
+    "qa/haeram-v2-pc-team-final.jpg",
+    "qa/haeram-v2-mobile-hero.jpg",
+    "qa/haeram-v2-mobile-situations.jpg",
+    "qa/haeram-v2-mobile-form.jpg",
+    "qa/revision-v2-mobile-overview.jpg"
   ],
-  "limitations": [
-    "No callback intake backend. Contact occurs through Naver booking, Kakao, or phone. Memo stays in browser until visitor copies or downloads it.",
-    "Professional names and affiliations were copied from existing public Haeram site; office should confirm current cooperation and fee policy before domain launch."
+  "notes": [
+    "Viewport checks emulate browser sizes, not physical iPhone Safari tests. Safe-area insets are included in CSS.",
+    "The complete original fields remain visible on the compact form. Supplementary explanatory text and decorative image sizes reduce on very short screens.",
+    "Preview remains noindex until production-domain launch.",
+    "Private Google sheet connection and fictional test-row details are stored only in backend/, not the public repository."
   ]
 }

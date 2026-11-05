@@ -2,5 +2,11 @@
   "duplicate_ids": [],
   "broken_anchors": [],
   "missing_local_sources": [],
-  "h1_count": 1
+  "h1_count": 1,
+  "location_mentions": 0,
+  "keywords": {
+    "한정승인": 21,
+    "상속포기": 22,
+    "상속등기": 20
+  }
 }
