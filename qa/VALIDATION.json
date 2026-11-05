@@ -1,6 +1,6 @@
 {
-  "revision": "v2",
-  "checked_at": "2026-11-05T23:51:17.041227+09:00",
+  "revision": "v3",
+  "checked_at": "2026-11-06T00:08:20.715980",
   "browser": "Chrome via connected browser; CSS viewport validation",
   "viewports": [
     {
@@ -56,7 +56,7 @@
   "functional_checks": {
     "three_keyword_tabs": "distinct guidance and CTA",
     "mobile_header_hero_and_contextual_ctas": "navigate to free consultation form",
-    "expert_profiles": "three large PC photos; mobile three-name tabs",
+    "expert_profiles": "All three profiles and photos are visible together on desktop and mobile; no tabs or hidden cards",
     "four_process_steps": "four distinct explanations on selection",
     "cost_and_faq": "dialog opens and closes without growing section",
     "original_six_fields": "same labels, order, free input, all required",
@@ -64,7 +64,9 @@
     "server_validation_and_recovery_compatibility": "passed",
     "live_submission": "browser success and six-field Google Sheets readback verified",
     "duplicate_retry": "live duplicate=true with same lead ID, no extra write",
-    "mail_notifications_added": false
+    "mail_notifications_added": false,
+    "scroll": "Native wheel movement verified: scrollY 2022 to 2302, between section boundaries; root scrollSnapType none",
+    "mobile_together": "430×800: three portraits in the same row; all cards display:block and hidden:false; no profile tabs"
   },
   "static_checks": {
     "duplicate_ids": [],
@@ -84,7 +86,8 @@
     "qa/haeram-v2-mobile-hero.jpg",
     "qa/haeram-v2-mobile-situations.jpg",
     "qa/haeram-v2-mobile-form.jpg",
-    "qa/revision-v2-mobile-overview.jpg"
+    "qa/revision-v2-mobile-overview.jpg",
+    "qa/haeram-v3-team-together.jpg"
   ],
   "notes": [
     "Viewport checks emulate browser sizes, not physical iPhone Safari tests. Safe-area insets are included in CSS.",
