@@ -5,7 +5,8 @@
 - Preview: https://studioduggubi.github.io/haeram-inheritance/
 - Static HTML, CSS and JavaScript. Run locally with `python3 -m http.server 4186 --bind 127.0.0.1`.
 - Native continuous scrolling; no wheel interception or scroll snapping.
-- Three professional portraits remain visible together on desktop and mobile.
+- Three professional portraits remain visible together on desktop and mobile, with natural aspect ratios and individually calibrated crops.
+- Buttons share primary/secondary styling and keyboard focus states. Display arrows and floating decorative badges are removed.
 - Deadline estimates use calendar months and distinguish the death date from the date inheritance became known. They show base dates before holiday extensions; see the calculator's source and exception dialog.
 - Six original consultation fields remain in order. Name, phone and consent are required. The four context fields are optional. Concern shortcuts preserve free-entry details.
 - Success requires a confirmed server response with the matching request ID. The thank-you page requires a recent confirmed session receipt and does not emit a conversion for direct visits, test submissions or repeated reloads.

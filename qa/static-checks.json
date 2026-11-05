@@ -1,15 +1,13 @@
 {
+  "revision": 5,
   "passed": true,
-  "revision": 4,
   "checks": [
-    "unique IDs and valid anchors",
-    "all local resources exist",
-    "original six fields in original order",
-    "name/phone/consent required; four context fields optional",
-    "all images have alt attributes",
-    "removed outdated FAQ/about/cost blocks and Incheon/cooperation copy",
-    "3D semantic assets; no remaining vector line icons",
-    "no scroll snapping or wheel interception",
-    "main page crawlable; thank-you page excluded"
+    "No display arrows in HTML, dynamic result text, receipt page or CSS",
+    "All local assets and anchors exist; unique IDs",
+    "Original six consultation fields and validation requirements retained",
+    "All photographs have intrinsic dimensions and alt text",
+    "Photograph display uses natural aspect ratios",
+    "No wheel interception or snapping",
+    "Intake backend and analytics implementation unchanged"
   ]
 }

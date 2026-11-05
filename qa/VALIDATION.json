@@ -1,68 +1,61 @@
 {
-  "revision": 4,
+  "revision": 5,
   "status": "passed",
-  "date": "2026-11-06T00:58:34.202837",
-  "screenshots": [
-    "haeram-v4-pc-team.jpg",
-    "haeram-v4-mobile-process.jpg",
-    "haeram-v4-pc-hero.jpg",
-    "haeram-v4-og-source.jpg",
-    "haeram-v4-mobile-form.jpg",
-    "haeram-v4-mobile-team.jpg",
-    "haeram-v4-mobile-deadline.jpg",
-    "haeram-v4-mobile-hero.jpg",
-    "haeram-v4-receipt.jpg",
-    "haeram-v4-mobile-situations.jpg"
+  "date": "2026-11-06T01:34:18.052093",
+  "focus": [
+    "Arrow removal across all UI states",
+    "Consistent button sizes, borders, hover, active and keyboard focus",
+    "Typography and spacing cleanup; repeated decoration removed",
+    "Separate source-aware portrait crops using natural proportions",
+    "16px form inputs; no horizontal overflow at checked widths"
   ],
-  "viewport_checks": [
+  "viewports": [
     {
-      "width": 1440,
-      "height": 900,
-      "section_viewport": 696
-    },
-    {
-      "width": 1024,
-      "height": 768,
-      "section_viewport": 564
+      "width": 375,
+      "height": 667,
+      "available": 505
     },
     {
       "width": 430,
-      "height": 932,
-      "section_viewport": 754
-    },
-    {
-      "width": 393,
-      "height": 852,
-      "section_viewport": 674
+      "height": 730,
+      "available": 554
     },
     {
       "width": 430,
       "height": 800,
-      "section_viewport": 622
+      "available": 624
     },
     {
-      "width": 375,
-      "height": 667,
-      "section_viewport": 507
+      "width": 393,
+      "height": 852,
+      "available": 676
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "available": 576
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "available": 708
     }
   ],
-  "checks": [
-    "All seven initial sections fit the available viewport in the tested sizes",
-    "All three professionals visible together; shared lower frame edge; no long leg exposure",
-    "Five service tab states fit the mobile viewport",
-    "12 deadline edge cases passed",
-    "Separate awareness date changes only civil deadline; actual death date populates the form",
-    "Concern selection preserves manually entered details",
-    "One fictitious name-and-phone-only submission stored in the existing inheritance sheet",
-    "Four optional values read back blank, test status and request ID verified",
-    "Server-confirmed thank-you screen verified; direct visit shows no receipt",
-    "Conversion confirmed-only / expiry / test / refresh guards passed with no real ad conversion sent",
-    "Native scrolling retained; no wheel or touch interception",
-    "All local asset paths and anchor references verified"
-  ],
-  "limitations": [
-    "Calculator displays base deadlines before holiday extensions and individual exceptions",
-    "Naver ad account attribution and domain registration not independently verified"
-  ],
-  "private_customer_data_committed": false
+  "initial_section_height_tolerance_px": 1,
+  "all_three_people_visible_on_mobile": true,
+  "portrait_aspect_ratio_tolerance": 0.001,
+  "concern_selection_and_calculator_date_transfer_verified": true,
+  "backend_modified": false,
+  "new_live_lead_test_sent": false,
+  "previous_verified_backend_revision": 4,
+  "screenshots": [
+    "haeram-v5-mobile-form.jpg",
+    "haeram-v5-pc-hero.jpg",
+    "haeram-v5-mobile-services.jpg",
+    "haeram-v5-mobile-deadline.jpg",
+    "haeram-v5-pc-team.jpg",
+    "haeram-v5-og-source.jpg",
+    "haeram-v5-mobile-hero.jpg",
+    "haeram-v5-mobile-team.jpg"
+  ]
 }
