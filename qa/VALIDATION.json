@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-11-05T22:36:45.128282+09:00",
+  "browser": "Chromium via Codex in-app browser; native Chrome screenshots",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 740,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 393,
+      "height": 852,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "horizontal_overflow": false,
+      "broken_images": 0
+    }
+  ],
+  "functional_checks": {
+    "five_distinct_situation_panels": "passed",
+    "keyboard_tab_home_selection": "passed",
+    "context_to_memo": "passed: property topic and family discussion stage",
+    "copy_memo": "passed: browser success state",
+    "download_memo": "passed: actual UTF-8 text file readback",
+    "office_carousel": "passed: 01/04 to 02/04",
+    "mobile_menu": "passed: opens and closes after navigation",
+    "faq": "passed: deadline question expanded",
+    "console_errors": 0,
+    "local_sources": "all present",
+    "duplicate_ids": 0,
+    "broken_anchors": 0,
+    "h1_count": 1
+  },
+  "external_channels": {
+    "kakao": "Opens official Kakao login with correct channel chat continuation; no chat sent",
+    "naver_booking": "Opens configured official Naver Maps place booking route; no booking submitted",
+    "phone": "tel:050714146860"
+  },
+  "preview": {
+    "url": "https://studioduggubi.github.io/haeram-inheritance/",
+    "http_status": 200,
+    "noindex": true,
+    "existing_domains_changed": false
+  },
+  "screenshots": [
+    "qa/desktop-1440.png",
+    "qa/mobile-393.png",
+    "qa/desktop-preview.jpg",
+    "qa/mobile-preview.jpg"
+  ],
+  "limitations": [
+    "No callback intake backend. Contact occurs through Naver booking, Kakao, or phone. Memo stays in browser until visitor copies or downloads it.",
+    "Professional names and affiliations were copied from existing public Haeram site; office should confirm current cooperation and fee policy before domain launch."
+  ]
+}
