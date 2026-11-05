@@ -1,13 +1,13 @@
 {
-  "revision": 5,
+  "revision": 6,
   "status": "passed",
-  "date": "2026-11-06T01:34:18.052093",
+  "date": "2026-11-06T02:15:36.191722",
   "focus": [
-    "Arrow removal across all UI states",
-    "Consistent button sizes, borders, hover, active and keyboard focus",
-    "Typography and spacing cleanup; repeated decoration removed",
-    "Separate source-aware portrait crops using natural proportions",
-    "16px form inputs; no horizontal overflow at checked widths"
+    "Original official-site introductions and all nine career credentials restored",
+    "All three portraits remain together; inline profile disclosure opens one panel and supports keyboard close with focus return",
+    "Manual five-photo office gallery with thumbnails, keyboard navigation and caption state",
+    "Native year/month/day controls replace calendar popups for death and awareness dates",
+    "Leap year, month-end clearing, future-date bounds, calculation and consultation-date transfer verified"
   ],
   "viewports": [
     {
@@ -49,13 +49,21 @@
   "new_live_lead_test_sent": false,
   "previous_verified_backend_revision": 4,
   "screenshots": [
-    "haeram-v5-mobile-form.jpg",
-    "haeram-v5-pc-hero.jpg",
-    "haeram-v5-mobile-services.jpg",
-    "haeram-v5-mobile-deadline.jpg",
-    "haeram-v5-pc-team.jpg",
-    "haeram-v5-og-source.jpg",
-    "haeram-v5-mobile-hero.jpg",
-    "haeram-v5-mobile-team.jpg"
-  ]
+    "haeram-v6-mobile-date.jpg",
+    "haeram-v6-mobile-team.jpg",
+    "haeram-v6-mobile-office.jpg",
+    "haeram-v6-pc-office.jpg"
+  ],
+  "profile_details_expand": true,
+  "office_photo_count": 5,
+  "native_calendar_inputs": 0,
+  "date_selection_checks": [
+    "2024-02-29 supported; changing year to 2025 clears day 29",
+    "August 31 changing to September clears invalid day",
+    "Current-year month and current-month day end at Korea today",
+    "Death 2026-08-31 calculates base dates 2026-11-30 and 2027-02-28",
+    "Later awareness 2026-10-01 changes civil date to 2027-01-01 while tax dates remain unchanged",
+    "Unchecking later awareness clears and disables its controls"
+  ],
+  "browser_verification": "Chrome responsive viewport checks; physical iPhone native picker not directly tested"
 }
