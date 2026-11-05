@@ -1,33 +1,15 @@
-# 해람 상속 사이트
+# 해람 상속 홈페이지
 
-한정승인·상속포기·상속등기를 중심으로 구성한 해람법무사 상속 사이트입니다. 회생 사이트의 색감·타이포·사진 분위기를 계승했습니다.
+한정승인 · 상속포기 · 상속등기 중심의 무료 상담 사이트입니다.
 
-- 미리보기: https://studioduggubi.github.io/haeram-inheritance/
-- HTML/CSS/JavaScript 정적 사이트. 별도 빌드 의존성이 없습니다.
-- 로컬 실행: `python3 -m http.server 4186 --bind 127.0.0.1`
+- Preview: https://studioduggubi.github.io/haeram-inheritance/
+- Static HTML, CSS and JavaScript. Run locally with `python3 -m http.server 4186 --bind 127.0.0.1`.
+- Native continuous scrolling; no wheel interception or scroll snapping.
+- Three professional portraits remain visible together on desktop and mobile.
+- Deadline estimates use calendar months and distinguish the death date from the date inheritance became known. They show base dates before holiday extensions; see the calculator's source and exception dialog.
+- Six original consultation fields remain in order. Name, phone and consent are required. The four context fields are optional. Concern shortcuts preserve free-entry details.
+- Success requires a confirmed server response with the matching request ID. The thank-you page requires a recent confirmed session receipt and does not emit a conversion for direct visits, test submissions or repeated reloads.
+- The official site's existing Naver common key and legacy `cnv` integration are retained. No form contents are passed to analytics. Advertising domain registration and report attribution require verification in the advertiser account.
+- Main page is crawlable. The thank-you page remains excluded from indexing.
 
-## 고객 흐름
-
-첫 화면 → 한정승인·상속포기·상속등기 안내 → 무료 상담 설문 → 전문가 소개 → 진행·비용 → FAQ → 사무실.
-
-헤더·첫 화면·상황별 안내·하단 고정 버튼에서 같은 무료 상담 설문으로 이동합니다. 원래 상속 사이트와 동일하게 이름, 연락처, 지역, 고인과의 관계, 고인 사망 시점, 상담 내용의 6개 항목을 같은 순서로 받습니다. 모두 필수 자유 입력입니다. 개인정보 동의는 별도 체크합니다.
-
-## 상담 접수
-
-기존에 연결한 비공개 Google 스프레드시트의 `상속상담접수` 탭에 저장합니다. 실제 저장 성공 및 접수번호 확인 응답을 받은 뒤에만 접수 완료를 표시합니다. 같은 접수번호 재시도는 중복 저장하지 않습니다. 서버에서도 필수 항목·전화번호·동의를 확인하고 수식 삽입을 막습니다.
-
-상속 접수는 이메일 알림을 새로 발송하지 않습니다. 기존 회생 접수·알림 흐름과 구분됩니다. 비공개 시트 ID, 서버 원본, 연결 설정과 실제 테스트 기록은 작업 폴더의 `backend/`에 있으며 공개 저장소에서는 제외합니다. 수집 목적과 항목, 90일 보유기간은 신청 화면에서 확인할 수 있습니다.
-
-## 화면 구성
-
-첫 화면은 이름 표기까지 같은 화면에서 보입니다. 상황 안내는 3개 키워드별 탭으로 전환하며, 진행 1~4단계도 누르면 설명이 바뀝니다. 전문가 세 명의 사진은 PC·모바일에서 항상 함께 보입니다. 사무실 사진은 맨 아래로 옮겼습니다. 비용·FAQ 설명은 대화상자로 열려 페이지 높이를 늘리지 않습니다.
-
-화면 크기에 맞춰 섹션 높이를 조정하며, 휠·터치 스크롤에 섹션 스냅을 적용하지 않습니다. 아주 짧은 화면에서는 보조 설명과 장식 크기를 줄여 주요 항목을 유지합니다.
-
-## 검색·도메인
-
-제목·설명·OG·구조화 데이터와 주요 문구를 한정승인·상속포기·상속등기 중심으로 작성했습니다. 미리보기는 중복 색인을 방지하기 위해 noindex와 robots 차단 상태입니다. 운영 도메인 전환 시 canonical, sitemap, robots, 구조화 데이터 URL을 최종 주소에 맞춰 갱신합니다.
-
-## 사진·이미지
-
-실제 김해람 법무사와 사무실 사진은 기존 브랜드 자산, 김동운·김정률 사진은 기존 상속 사이트 공개 사진을 사용했습니다. 두 협업 전문가의 배경 제거에는 내장 imagegen을 사용했고 원본과 결과를 별도 보존합니다. 상속 전용 일러스트도 같은 캐릭터를 참조해 제작했습니다. 이미지 원본·프롬프트·검수 자료는 클라우드 작업 폴더의 design/ 및 qa/에 있습니다.
+Private backend sources, email feedback, generation originals and design records are excluded from this public repository. Real customer data and credentials must not be committed.

@@ -1,12 +1,15 @@
 {
-  "duplicate_ids": [],
-  "broken_anchors": [],
-  "missing_local_sources": [],
-  "h1_count": 1,
-  "location_mentions": 0,
-  "keywords": {
-    "한정승인": 21,
-    "상속포기": 22,
-    "상속등기": 20
-  }
+  "passed": true,
+  "revision": 4,
+  "checks": [
+    "unique IDs and valid anchors",
+    "all local resources exist",
+    "original six fields in original order",
+    "name/phone/consent required; four context fields optional",
+    "all images have alt attributes",
+    "removed outdated FAQ/about/cost blocks and Incheon/cooperation copy",
+    "3D semantic assets; no remaining vector line icons",
+    "no scroll snapping or wheel interception",
+    "main page crawlable; thank-you page excluded"
+  ]
 }

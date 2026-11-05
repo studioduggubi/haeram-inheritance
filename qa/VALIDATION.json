@@ -1,98 +1,68 @@
 {
-  "revision": "v3",
-  "checked_at": "2026-11-06T00:08:20.715980",
-  "browser": "Chrome via connected browser; CSS viewport validation",
-  "viewports": [
+  "revision": 4,
+  "status": "passed",
+  "date": "2026-11-06T00:58:34.202837",
+  "screenshots": [
+    "haeram-v4-pc-team.jpg",
+    "haeram-v4-mobile-process.jpg",
+    "haeram-v4-pc-hero.jpg",
+    "haeram-v4-og-source.jpg",
+    "haeram-v4-mobile-form.jpg",
+    "haeram-v4-mobile-team.jpg",
+    "haeram-v4-mobile-deadline.jpg",
+    "haeram-v4-mobile-hero.jpg",
+    "haeram-v4-receipt.jpg",
+    "haeram-v4-mobile-situations.jpg"
+  ],
+  "viewport_checks": [
+    {
+      "width": 1440,
+      "height": 900,
+      "section_viewport": 696
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "section_viewport": 564
+    },
     {
       "width": 430,
       "height": 932,
-      "available_after_header_and_dock": 806,
-      "all_seven_default_sections_fit": true,
-      "horizontal_overflow": false
+      "section_viewport": 754
+    },
+    {
+      "width": 393,
+      "height": 852,
+      "section_viewport": 674
     },
     {
       "width": 430,
       "height": 800,
-      "available_after_header_and_dock": 674,
-      "all_seven_default_sections_fit": true,
-      "horizontal_overflow": false
-    },
-    {
-      "width": 393,
-      "height": 700,
-      "available_after_header_and_dock": 574,
-      "all_seven_default_sections_fit": true,
-      "horizontal_overflow": false
+      "section_viewport": 622
     },
     {
       "width": 375,
       "height": 667,
-      "available_after_header_and_dock": 541,
-      "all_seven_default_sections_fit": true,
-      "horizontal_overflow": false
-    },
-    {
-      "width": 320,
-      "height": 568,
-      "available_after_header_and_dock": 442,
-      "all_seven_default_sections_fit": true,
-      "horizontal_overflow": false
-    },
-    {
-      "width": 1440,
-      "height": 900,
-      "available_after_header_and_dock": 812,
-      "all_seven_default_sections_fit": true,
-      "horizontal_overflow": false
-    },
-    {
-      "width": 1280,
-      "height": 720,
-      "available_after_header_and_dock": 632,
-      "all_seven_default_sections_fit": true,
-      "horizontal_overflow": false
+      "section_viewport": 507
     }
   ],
-  "functional_checks": {
-    "three_keyword_tabs": "distinct guidance and CTA",
-    "mobile_header_hero_and_contextual_ctas": "navigate to free consultation form",
-    "expert_profiles": "All three profiles and photos are visible together on desktop and mobile; no tabs or hidden cards",
-    "four_process_steps": "four distinct explanations on selection",
-    "cost_and_faq": "dialog opens and closes without growing section",
-    "original_six_fields": "same labels, order, free input, all required",
-    "privacy_consent": "unchecked by default, required",
-    "server_validation_and_recovery_compatibility": "passed",
-    "live_submission": "browser success and six-field Google Sheets readback verified",
-    "duplicate_retry": "live duplicate=true with same lead ID, no extra write",
-    "mail_notifications_added": false,
-    "scroll": "Native wheel movement verified: scrollY 2022 to 2302, between section boundaries; root scrollSnapType none",
-    "mobile_together": "430×800: three portraits in the same row; all cards display:block and hidden:false; no profile tabs"
-  },
-  "static_checks": {
-    "duplicate_ids": [],
-    "broken_anchors": [],
-    "missing_local_sources": [],
-    "h1_count": 1,
-    "location_mentions": 0,
-    "keywords": {
-      "한정승인": 21,
-      "상속포기": 22,
-      "상속등기": 20
-    }
-  },
-  "screenshots": [
-    "qa/haeram-v2-pc-hero.jpg",
-    "qa/haeram-v2-pc-team-final.jpg",
-    "qa/haeram-v2-mobile-hero.jpg",
-    "qa/haeram-v2-mobile-situations.jpg",
-    "qa/haeram-v2-mobile-form.jpg",
-    "qa/revision-v2-mobile-overview.jpg",
-    "qa/haeram-v3-team-together.jpg"
+  "checks": [
+    "All seven initial sections fit the available viewport in the tested sizes",
+    "All three professionals visible together; shared lower frame edge; no long leg exposure",
+    "Five service tab states fit the mobile viewport",
+    "12 deadline edge cases passed",
+    "Separate awareness date changes only civil deadline; actual death date populates the form",
+    "Concern selection preserves manually entered details",
+    "One fictitious name-and-phone-only submission stored in the existing inheritance sheet",
+    "Four optional values read back blank, test status and request ID verified",
+    "Server-confirmed thank-you screen verified; direct visit shows no receipt",
+    "Conversion confirmed-only / expiry / test / refresh guards passed with no real ad conversion sent",
+    "Native scrolling retained; no wheel or touch interception",
+    "All local asset paths and anchor references verified"
   ],
-  "notes": [
-    "Viewport checks emulate browser sizes, not physical iPhone Safari tests. Safe-area insets are included in CSS.",
-    "The complete original fields remain visible on the compact form. Supplementary explanatory text and decorative image sizes reduce on very short screens.",
-    "Preview remains noindex until production-domain launch.",
-    "Private Google sheet connection and fictional test-row details are stored only in backend/, not the public repository."
-  ]
+  "limitations": [
+    "Calculator displays base deadlines before holiday extensions and individual exceptions",
+    "Naver ad account attribution and domain registration not independently verified"
+  ],
+  "private_customer_data_committed": false
 }

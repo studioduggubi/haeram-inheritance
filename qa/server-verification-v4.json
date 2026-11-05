@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "name and phone required; four context fields optional",
+    "original field order and exact stored values",
+    "server consent and phone validation",
+    "formula neutralization",
+    "duplicate retry without extra row",
+    "honeypot and too-fast submission rejection",
+    "length limits",
+    "existing recovery validation compatibility",
+    "health endpoint"
+  ],
+  "mailSent": false
+}

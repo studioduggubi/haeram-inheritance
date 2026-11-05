@@ -1,0 +1,2 @@
+'use strict';
+(()=>{let receipt=null;try{receipt=JSON.parse(sessionStorage.getItem('haeram-inheritance-receipt')||'null');}catch(error){}const valid=receipt&&/^[0-9a-f-]{36}$/.test(receipt.leadId)&&Number.isFinite(receipt.confirmedAt)&&Date.now()-receipt.confirmedAt>=0&&Date.now()-receipt.confirmedAt<1800000;document.getElementById('receipt-pending').hidden=true;document.getElementById(valid?'receipt-confirmed':'receipt-missing').hidden=false;})();
