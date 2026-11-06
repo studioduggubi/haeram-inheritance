@@ -6,6 +6,7 @@
  function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','메뉴 열기');mobileNav.hidden=true;}
  menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');mobileNav.hidden=!open;});
  $$('a',mobileNav).forEach(link=>link.addEventListener('click',closeMenu));
+ document.addEventListener('click',event=>{if(menu.getAttribute('aria-expanded')==='true'&&!mobileNav.contains(event.target)&&!menu.contains(event.target))closeMenu();});
  window.addEventListener('resize',()=>{if(innerWidth>800)closeMenu();},{passive:true});
 
  const tabs=$$('[data-situation]'),serviceLink=$('#service-consult');
