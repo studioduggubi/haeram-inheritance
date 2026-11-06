@@ -1,0 +1,14 @@
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.haeram-law\.com$ [NC]
+RewriteRule ^ https://haeram-law.com%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+RewriteRule ^ https://haeram-law.com%{REQUEST_URI} [R=301,L,NE]
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteCond %{QUERY_STRING} (^|&)bo_table=cs(&|$) [NC]
+RewriteRule ^bbs/write\.php$ /#consult [R=301,L,NE,QSD]
+</IfModule>
