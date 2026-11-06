@@ -6,8 +6,8 @@
    const selected=button.dataset.profile===key;
    const name=button.closest('.person-card').querySelector('.person-info h3').textContent.trim();
    button.setAttribute('aria-pressed',String(selected));
-   button.textContent=selected?'소개 보는 중':'인사말·경력';
-   button.setAttribute('aria-label',name+(selected?' 인사말과 경력 보는 중':' 인사말과 경력 보기'));
+   button.textContent=selected?'인사말 열림':'인사말·경력';
+   button.setAttribute('aria-label',name+(selected?' 인사말과 경력 펼쳐짐':' 인사말과 경력 보기'));
    document.getElementById(button.getAttribute('aria-controls')).hidden=!selected;
   });
  }
