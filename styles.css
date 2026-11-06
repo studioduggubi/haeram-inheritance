@@ -206,12 +206,13 @@ dialog{width:min(590px,calc(100% - 40px));max-height:85svh;overflow:auto;padding
 /* Compact identity cards: clear faces, raised portraits and a short lower fade. */
 .person-card{border:0;border-radius:0;overflow:visible;background:transparent}
 .person-frame{width:100%;height:clamp(172px,22vw,270px);position:relative;isolation:isolate;overflow:visible}
-.person-frame:after{content:'';position:absolute;inset:auto 0 0;height:clamp(48px,4.5vw,60px);z-index:1;pointer-events:none;background:linear-gradient(180deg,#15251b00,#15251be8 35%,#15251b 100%)}
+.person-frame:after{content:'';position:absolute;inset:auto 0 0;height:clamp(72px,6.75vw,90px);z-index:1;pointer-events:none;background:linear-gradient(180deg,#15251b00 0%,#15251b10 14%,#15251b45 30%,#15251b99 50%,#15251bb8 72%,#15251bce 100%)}
 .person-card .person-photo{height:100%;aspect-ratio:auto;overflow:hidden;isolation:isolate}
 .person-card .person-photo:before{inset:36px 0 0;border-radius:4px 4px 0 0}
 .person-card .person-photo img{top:8px;transform:translate(-50%,-1.5228%)}
 .person-card.kim-h .person-photo img{top:8px;transform:translate(-50%,-5.2246%)}
 .person-card.kim-j .person-photo img{top:8px;transform:translate(-50%,-2.9188%)}
+.person-card.kim-d .person-photo img,.person-card.kim-j .person-photo img{-webkit-mask-image:linear-gradient(180deg,#000 84%,#0000 100%);mask-image:linear-gradient(180deg,#000 84%,#0000 100%)}
 .person-card .person-info{position:absolute;z-index:2;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:8px;padding:10px 14px;text-align:left;color:#fffdf5}
 .person-card .person-info h3{flex-shrink:0;font-size:24px;line-height:1.25;color:#fffdf5}
 .person-card .person-meta{min-width:0;text-align:right;line-height:1.4}
@@ -221,15 +222,15 @@ dialog{width:min(590px,calc(100% - 40px));max-height:85svh;overflow:auto;padding
 .person-card>.profile-toggle:hover{background:#e1e9d9;color:#263f26}
 .person-card>.profile-toggle[aria-expanded=true]{background:var(--forest);color:#fffdf5}
 @media(min-width:801px){
- .person-card .person-photo img{width:min(63.75%,247.5px)}
+ .person-card .person-photo img{width:min(57.375%,222.75px)}
  .person-card.kim-h .person-photo img{width:min(74.25%,288.75px)}
  .person-card.kim-j .person-photo img{width:min(61.5%,240px)}
 }
 @media(max-width:800px){
  .person-frame{height:auto;aspect-ratio:1/1.35;max-height:300px}
- .person-frame:after{height:clamp(48px,8.5vw,64px)}
+ .person-frame:after{height:clamp(72px,12.75vw,96px)}
  .person-card .person-photo:before{inset:30px 0 0}
- .person-card .person-photo img{width:105.75%}
+ .person-card .person-photo img{width:95.175%}
  .person-card.kim-h .person-photo img{width:123%}
  .person-card.kim-j .person-photo img{width:103.5%}
  .person-card .person-info{padding:8px;gap:3px}
