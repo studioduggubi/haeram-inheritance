@@ -1,5 +1,13 @@
 # 해람 상속 홈페이지
 
+## Production deployment
+
+- Production: https://haeram-law.com/ on the existing Cafe24 web hosting. Apex DNS, Google mail and the recovery subdomain remain unchanged.
+- GitHub Pages is a preview. Pushing to GitHub alone does not update production; also deploy the reviewed static release to Cafe24.
+- Include `.htaccess`, public HTML/CSS/JS and referenced `assets/`. Exclude `.git`, `backend/`, `design/`, `qa/`, server backups, secrets and customer records.
+- The HTTPS reverse proxy requires the forwarded-protocol condition. Keep the HTTP upgrade as 302: this Cafe24 environment rewrites HTTP 301 responses into redirect loops. HTTPS www and legacy URLs use 301.
+- The previous PHP site and database are preserved privately outside the public web root, with separate local project backups. Do not place them in this repository or the web root.
+
 한정승인 · 상속포기 · 상속등기의 기한·업무·전문가·진행 과정을 안내하는 상속 사이트입니다.
 
 - Preview: https://studioduggubi.github.io/haeram-inheritance/
@@ -18,3 +26,4 @@
 - Main page is crawlable. The thank-you page remains excluded from indexing.
 
 Private backend sources, email feedback, generation originals and design records are excluded from this public repository. Real customer data and credentials must not be committed.
+
