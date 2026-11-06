@@ -1,12 +1,26 @@
 {
-  "revision": 7,
+  "revision": 8,
   "passed": true,
-  "checks": [
-    "Unique IDs and valid local assets/anchors",
-    "All images have intrinsic dimensions and alt attributes",
-    "Two verified official videos and one embed; no autoplay on initial load",
-    "No Naver booking links or booking buttons; office map retained",
-    "No arrow glyphs in site-owned UI",
-    "Calculator, consultation, privacy, expert profiles, office gallery and analytics scripts unchanged"
-  ]
+  "checks": {
+    "unique_ids": true,
+    "local_assets_and_anchors": true,
+    "images_have_dimensions_and_alt": true,
+    "section_order": true,
+    "three_core_keywords": true,
+    "no_incheon_or_booking_or_arrow_glyphs": true,
+    "no_naver_booking_links": true,
+    "naver_map_preserved": true,
+    "original_statements_and_nine_credentials": true,
+    "three_portraits_visible_together": true,
+    "original_six_process_steps": true,
+    "six_fields_order": true,
+    "six_field_schema_preserved": true,
+    "unchecked_required_consent": true,
+    "intake_configuration_unchanged": true,
+    "backend_calculator_gallery_video_tracking_unchanged": true,
+    "no_consult_ctas_in_reading_sections": true,
+    "one_service_consult_link": true,
+    "no_root_scroll_snap_or_wheel_interception": true
+  },
+  "missing_references": []
 }

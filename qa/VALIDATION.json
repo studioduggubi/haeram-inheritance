@@ -1,72 +1,220 @@
 {
-  "revision": 7,
+  "revision": 8,
   "status": "passed",
-  "date": "2026-11-06T09:26:12.158561",
-  "scope": "Official inheritance YouTube player and selectable video list; Naver booking links excluded",
-  "video_count": 2,
-  "source_record": "private design/youtube-v7.json",
+  "date": "2026-11-06T11:07:48.382914",
+  "scope": "All ten approved revised actions: reading flow, distinct section grouping, restrained consultation, mobile readability and trust fixes",
   "viewports": [
     {
       "width": 375,
       "height": 667,
-      "available": 505,
-      "content": 459
+      "available": 509,
+      "sections": {
+        "home": 509,
+        "deadline": 497,
+        "situations": 509,
+        "team": 439,
+        "youtube": 507,
+        "process": 452,
+        "consult": 505,
+        "contact": 507
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
       "width": 430,
       "height": 730,
-      "available": 554,
-      "content": 454
+      "available": 572,
+      "sections": {
+        "home": 572,
+        "deadline": 497,
+        "situations": 485,
+        "team": 465,
+        "youtube": 517,
+        "process": 452,
+        "consult": 505,
+        "contact": 507
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
       "width": 430,
       "height": 800,
-      "available": 624,
-      "content": 498
+      "available": 632,
+      "sections": {
+        "home": 632,
+        "deadline": 568,
+        "situations": 594,
+        "team": 505,
+        "youtube": 591,
+        "process": 513,
+        "consult": 617,
+        "contact": 619
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
       "width": 393,
       "height": 852,
-      "available": 676,
-      "content": 490
+      "available": 684,
+      "sections": {
+        "home": 684,
+        "deadline": 568,
+        "situations": 619,
+        "team": 487,
+        "youtube": 570,
+        "process": 513,
+        "consult": 617,
+        "contact": 632
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
       "width": 1024,
       "height": 768,
-      "available": 576,
-      "content": 469
+      "available": 584,
+      "sections": {
+        "home": 584,
+        "deadline": 532,
+        "situations": 577,
+        "team": 539,
+        "youtube": 562,
+        "process": 429,
+        "consult": 579,
+        "contact": 557
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
     },
     {
       "width": 1440,
       "height": 900,
-      "available": 708,
-      "content": 593
+      "available": 716,
+      "sections": {
+        "home": 716,
+        "deadline": 635,
+        "situations": 675,
+        "team": 673,
+        "youtube": 712,
+        "process": 515,
+        "consult": 692,
+        "contact": 710
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
     }
   ],
-  "horizontal_overflow": false,
-  "long_title_mobile_state": {
-    "width": 375,
-    "height": 667,
-    "available": 505,
-    "content": 456,
-    "fits": true
+  "expanded_detail_policy": "Original introductions, credentials, service comparison and six process steps expand naturally; no content clipping or wheel interception.",
+  "calculator": {
+    "date_edit_clears_stale_results": true,
+    "auto_copied_death_date_cleared_when_source_changes": true,
+    "manual_intake_date_preserved": true,
+    "visible_reference_matches_auto_or_manual_state": true,
+    "month_end_and_leap_reset_verified": true,
+    "future_dates_excluded": true,
+    "independent_awareness_date_verified": true,
+    "calculation_unit_checks": 12,
+    "result_viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "available": 716,
+        "content": 715
+      },
+      {
+        "width": 1024,
+        "height": 768,
+        "available": 584,
+        "content": 583
+      },
+      {
+        "width": 430,
+        "height": 800,
+        "available": 632,
+        "content": 579
+      },
+      {
+        "width": 375,
+        "height": 667,
+        "available": 509,
+        "content": 501
+      }
+    ],
+    "stale_state_375_content": 502,
+    "past_state_375_content": 504
   },
-  "actual_playback_verified": {
-    "video": "f77E4Gz97pc",
-    "paused": false,
-    "current_time_seconds": 16.9,
-    "ready_state": 4
+  "profiles": {
+    "three_portraits_together": true,
+    "natural_aspect_ratios": true,
+    "original_messages": 3,
+    "original_credentials": 9,
+    "close_and_escape_restore_trigger_focus_and_team_position": true
   },
-  "no_autoplay_on_initial_load": true,
-  "selection_updates_title_topic_and_external_watch_link": true,
-  "mobile_focus_stays_on_visible_watch_control": true,
-  "mobile_menu_closes_and_navigates": true,
-  "naver_booking_links": 0,
-  "naver_map_preserved": true,
-  "backend_modified": false,
-  "new_live_lead_test_sent": false,
+  "services": {
+    "five_tabs_verified": true,
+    "short_mobile_heights": [
+      509,
+      485,
+      509,
+      509,
+      509
+    ],
+    "comparison_preserved": true,
+    "one_common_quiet_consult_link": true,
+    "selected_concern_passed_to_form": true
+  },
+  "form": {
+    "six_original_fields_in_order": true,
+    "required": [
+      "name",
+      "phone",
+      "consent"
+    ],
+    "consent_prechecked": false,
+    "optional_hint_visible_on_mobile": true,
+    "typed_content_preserved_by_concern_picker": true,
+    "picker_escape_and_selection_close": true,
+    "blank_submit_blocked": true,
+    "backend_modified": false,
+    "new_live_lead_test_sent": false
+  },
+  "reading_sections_have_no_consult_cta": [
+    "team",
+    "youtube",
+    "process"
+  ],
+  "youtube": {
+    "official_videos": 2,
+    "no_autoplay_on_initial_load": true,
+    "selection_updates_title_topic_watch_link": true,
+    "actual_playback_verified": {
+      "video": "FYYGHho6B8s",
+      "paused": false,
+      "current_time_seconds": 29.75,
+      "ready_state": 4
+    }
+  },
+  "office": {
+    "real_photos": 5,
+    "thumbnails_verified": true,
+    "keyboard_track_verified": true,
+    "naver_map_preserved": true,
+    "naver_booking_links": 0
+  },
   "screenshots": [
-    "haeram-v7-youtube-mobile.jpg",
-    "haeram-v7-youtube-pc.jpg"
+    "haeram-v8-mobile-home.jpg",
+    "haeram-v8-mobile-services.jpg",
+    "haeram-v8-mobile-team.jpg",
+    "haeram-v8-mobile-form.jpg",
+    "haeram-v8-mobile-office.jpg",
+    "haeram-v8-desktop-overview.jpg"
+  ],
+  "limitations": [
+    "Responsive browser viewports were tested, not a physical iPhone.",
+    "No new real lead was submitted; the unchanged backend and field schema were compared with the previously verified version.",
+    "Advertising account attribution and actual conversion lift are not measured by this UI revision."
   ]
 }
