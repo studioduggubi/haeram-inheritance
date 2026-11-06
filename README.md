@@ -5,7 +5,7 @@
 - Preview: https://studioduggubi.github.io/haeram-inheritance/
 - Static HTML, CSS and JavaScript. Run locally with `python3 -m http.server 4186 --bind 127.0.0.1`.
 - Revision 8 uses distinct cream, white, sage and forest sections. Reading sections have no repeated consultation prompts; the shared header/dock and key decision points retain access.
-- Customer situation tabs include a quiet comparison; the six original process steps expand below a three-phase overview. Core mobile prose is 14px, with default sections checked against the available viewport.
+- Customer situation tabs include a quiet comparison; the six original process steps expand below a three-phase overview. Core mobile prose is 14px, with default sections checked against the available viewport across ten desktop/mobile sizes.
 - Native continuous page scrolling with no wheel interception or page snapping. Only the office photo gallery snaps horizontally.
 - Three professional portraits remain visible together on desktop and mobile, with natural aspect ratios and individually calibrated crops. Each opens the original introduction and career credentials in an inline panel.
 - Buttons share primary/secondary styling and keyboard focus states. Display arrows and floating decorative badges are removed.

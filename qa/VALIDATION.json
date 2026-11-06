@@ -81,10 +81,10 @@
         "deadline": 532,
         "situations": 577,
         "team": 539,
-        "youtube": 562,
+        "youtube": 511,
         "process": 429,
         "consult": 579,
-        "contact": 557
+        "contact": 574
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -102,6 +102,74 @@
         "process": 515,
         "consult": 692,
         "contact": 710
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "available": 536,
+      "sections": {
+        "home": 536,
+        "deadline": 488,
+        "situations": 533,
+        "team": 495,
+        "youtube": 531,
+        "process": 385,
+        "consult": 535,
+        "contact": 486
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "available": 584,
+      "sections": {
+        "home": 584,
+        "deadline": 532,
+        "situations": 577,
+        "team": 539,
+        "youtube": 575,
+        "process": 429,
+        "consult": 579,
+        "contact": 574
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 768,
+      "available": 584,
+      "sections": {
+        "home": 584,
+        "deadline": 532,
+        "situations": 577,
+        "team": 539,
+        "youtube": 575,
+        "process": 429,
+        "consult": 579,
+        "contact": 574
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 720,
+      "available": 536,
+      "sections": {
+        "home": 536,
+        "deadline": 488,
+        "situations": 533,
+        "team": 495,
+        "youtube": 467,
+        "process": 385,
+        "consult": 535,
+        "contact": 486
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -216,5 +284,6 @@
     "Responsive browser viewports were tested, not a physical iPhone.",
     "No new real lead was submitted; the unchanged backend and field schema were compared with the previously verified version.",
     "Advertising account attribution and actual conversion lift are not measured by this UI revision."
-  ]
+  ],
+  "refinement": "Short desktop layouts use balanced video columns, bounded office photo heights and reduced surrounding whitespace; prose sizes unchanged."
 }
