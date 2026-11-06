@@ -30,6 +30,8 @@ Private backend sources, email feedback, generation originals and design records
 
 ## SEO and GA4 (2026-11-06)
 
+- Official gold-emblem favicons are linked on the homepage, receipt and error pages: a 96px PNG, a 16/32/48/64px ICO and a 180px Apple touch icon. The legacy SVG URL also serves the official emblem. Source artwork remains the existing official logo; no new logo was generated.
+
 - Canonical production URL: `https://haeram-law.com/`. The Korean title/description target 한정승인, 상속포기 and 상속등기. Open Graph and Twitter previews, Korean language, one H1, descriptive image alternatives and nine connected Schema.org entities are present. No fabricated reviews, ratings or local address have been added.
 - `sitemap.xml` contains the single canonical indexable home page. `robots.txt` allows search crawling and excludes private development paths. The receipt page is crawlable with `noindex,nofollow`; do not block it in robots because crawlers must read that directive.
 - Google Search Console URL-prefix ownership is verified. The sitemap was accepted successfully, a live URL test passed and recrawling was requested. Search Console is linked to this GA4 web stream. Search-result updates are processed by the search engine.
