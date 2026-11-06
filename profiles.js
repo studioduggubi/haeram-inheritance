@@ -1,17 +1,29 @@
 'use strict';
 (()=>{
- const triggers=[...document.querySelectorAll('[data-profile]')];if(!triggers.length)return;
- function showProfile(key){
-  triggers.forEach(button=>{
-   const selected=button.dataset.profile===key;
-   const name=button.closest('.person-card').querySelector('.person-info h3').textContent.trim();
-   button.setAttribute('aria-pressed',String(selected));
-   button.textContent=selected?'인사말 열림':'인사말·경력';
-   button.setAttribute('aria-label',name+(selected?' 인사말과 경력 펼쳐짐':' 인사말과 경력 보기'));
+ const tabs=[...document.querySelectorAll('.profile-choice[data-profile]')];if(!tabs.length)return;
+ function selectProfile(tab){
+  tabs.forEach(button=>{
+   const selected=button===tab;
+   button.setAttribute('aria-selected',String(selected));
+   button.tabIndex=selected?0:-1;
    document.getElementById(button.getAttribute('aria-controls')).hidden=!selected;
   });
  }
- // Keep one introduction visible. Selecting a profile never scrolls or moves focus.
- triggers.forEach(button=>button.addEventListener('click',()=>showProfile(button.dataset.profile)));
- showProfile((triggers.find(button=>button.getAttribute('aria-pressed')==='true')||triggers[0]).dataset.profile);
+ tabs.forEach((tab,index)=>{
+  // One native button covers the photograph, name and profession.
+  tab.addEventListener('click',()=>selectProfile(tab));
+  tab.addEventListener('keydown',event=>{
+   let next;
+   if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+   else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;
+   else if(event.key==='Home')next=0;
+   else if(event.key==='End')next=tabs.length-1;
+   else return;
+   event.preventDefault();
+   selectProfile(tabs[next]);
+   tabs[next].focus({preventScroll:true});
+  });
+ });
+ // The default introduction is already visible in HTML, including without JavaScript.
+ selectProfile(tabs.find(tab=>tab.getAttribute('aria-selected')==='true')||tabs[0]);
 })();

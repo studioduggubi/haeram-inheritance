@@ -203,60 +203,28 @@ dialog{width:min(590px,calc(100% - 40px));max-height:85svh;overflow:auto;padding
 
 @media(max-width:800px) and (max-height:740px){.video-list{margin-top:10px}.video-choice{padding-top:8px;padding-bottom:8px}}
 
-/* Compact identity cards: clear faces, raised portraits and a short lower fade. */
+/* A portrait is a single selectable tab, with crisp photography and solid identity labels. */
 .person-card{border:0;border-radius:0;overflow:visible;background:transparent}
-.person-frame{width:100%;height:clamp(172px,22vw,270px);position:relative;isolation:isolate;overflow:visible}
-.person-frame:after{content:'';position:absolute;inset:auto 0 0;height:clamp(72px,6.75vw,90px);z-index:1;pointer-events:none;background:linear-gradient(180deg,#15251b00 0%,#15251b10 14%,#15251b45 30%,#15251b99 50%,#15251bb8 72%,#15251bce 100%)}
-.person-card .person-photo{height:100%;aspect-ratio:auto;overflow:hidden;isolation:isolate}
+.profile-choice{position:relative;display:block;width:100%;margin:0;padding:0;border:0;border-radius:0;background:transparent;text-align:left;color:var(--ink);line-height:inherit;appearance:none;-webkit-appearance:none;cursor:pointer}
+.profile-choice:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.person-frame{display:block;width:100%;height:clamp(172px,22vw,270px);position:relative;isolation:isolate;overflow:visible}
+.person-frame:after{content:none}
+.person-card .person-photo{display:block;height:100%;aspect-ratio:auto;position:relative;isolation:isolate;overflow:hidden}
 .person-card .person-photo:before{inset:36px 0 0;border-radius:4px 4px 0 0}
-.person-card .person-photo img{top:8px;transform:translate(-50%,-1.5228%)}
+.person-card .person-photo img{top:8px;transform:translate(-50%,-1.5228%);opacity:1;filter:none;mask-image:none;-webkit-mask-image:none}
 .person-card.kim-h .person-photo img{top:8px;transform:translate(-50%,-5.2246%)}
 .person-card.kim-j .person-photo img{top:8px;transform:translate(-50%,-2.9188%)}
-.person-card.kim-d .person-photo img,.person-card.kim-j .person-photo img{-webkit-mask-image:linear-gradient(180deg,#000 84%,#0000 100%);mask-image:linear-gradient(180deg,#000 84%,#0000 100%)}
-.person-card .person-info{position:absolute;z-index:2;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:8px;padding:10px 14px;text-align:left;color:#fffdf5}
-.person-card .person-info h3{flex-shrink:0;font-size:24px;line-height:1.25;color:#fffdf5}
-.person-card .person-meta{min-width:0;text-align:right;line-height:1.4}
-.person-card .person-role{display:block;font-size:12px;font-weight:400;color:#f1f4e9;white-space:nowrap}
-.person-card .person-responsibility{font-size:11px;line-height:1.4;color:#dce5d4;margin-top:3px;white-space:normal}
-.person-card>.profile-toggle{display:flex;width:100%;min-height:40px;justify-content:center;margin:0;padding:8px;border:0;border-radius:0 0 4px 4px;background:#eef2e8;color:#3d5735;font-size:13px;font-weight:500;line-height:1.5}
-.person-card>.profile-toggle:hover{background:#e1e9d9;color:#263f26}
-.person-card>.profile-toggle[aria-pressed=true]{background:var(--forest);color:#fffdf5}
-@media(min-width:801px){
- .person-card .person-photo img{width:min(57.375%,222.75px)}
- .person-card.kim-h .person-photo img{width:min(74.25%,288.75px)}
- .person-card.kim-j .person-photo img{width:min(61.5%,240px)}
-}
-@media(max-width:800px){
- .person-frame{height:auto;aspect-ratio:1/1.35;max-height:300px}
- .person-frame:after{height:clamp(72px,12.75vw,96px)}
- .person-card .person-photo:before{inset:30px 0 0}
- .person-card .person-photo img{width:95.175%}
- .person-card.kim-h .person-photo img{width:123%}
- .person-card.kim-j .person-photo img{width:103.5%}
- .person-card .person-info{padding:8px;gap:3px}
- .person-card .person-info h3{font-size:clamp(14px,3.65vw,20px);line-height:1.25}
- .person-card .person-role{font-size:clamp(9px,2.3vw,11px)}
- .person-card .person-responsibility{font-size:clamp(8px,2.1vw,10px);line-height:1.4;margin-top:2px;letter-spacing:-.035em}
- .person-card>.profile-toggle{min-height:36px;padding:7px 3px;font-size:12px}
- .profile-details:has(.profile-detail:not([hidden])){margin-top:16px}
-}
-@media(max-width:480px){
- .person-card .person-info{padding:8px 6px}
- .person-card .person-responsibility{display:none}
-}
-@media(max-width:360px){
- .person-card .person-info{padding:8px 5px}
- .person-card .person-info h3{font-size:13px}
- .person-card .person-role{font-size:9px}
- .person-card .person-lead{display:none}
- .person-card>.profile-toggle{font-size:11px}
-}
-
-/* The selected portrait tab joins its visible introduction. */
+.person-card .person-info{position:absolute;z-index:2;left:0;right:0;bottom:0;height:50px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;text-align:left;background:#e8eee1;color:#314a34;transition:background-color .15s,color .15s}
+.person-card .person-name{flex-shrink:0;font-size:24px;font-weight:600;line-height:1.25}
+.person-card .person-meta{display:block;min-width:0;text-align:right;line-height:1.4}
+.person-card .person-role{display:block;font-size:12px;font-weight:400;white-space:nowrap}
+.person-card .person-responsibility{display:block;font-size:11px;line-height:1.4;margin-top:3px;color:#5d7054;white-space:normal}
+.profile-choice:hover .person-info{background:#dce6d4}
+.profile-choice[aria-selected=true] .person-info{background:var(--forest);color:#fffdf5}
+.profile-choice[aria-selected=true] .person-responsibility{color:#d7e2cf}
 .profile-details:has(.profile-detail:not([hidden])){margin-top:0}
-.person-card>.profile-toggle{border-radius:0}
-.person-card>.profile-toggle[aria-pressed=true]{background:var(--forest);color:#fffdf5;font-weight:600}
 .profile-detail{padding:0;border:0;border-radius:0 0 5px 5px;background:#f2f5ed;overflow:hidden}
+.profile-detail:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 .profile-detail-heading{padding:14px 22px;background:var(--forest);color:#fffdf5}
 .profile-detail-heading h3{font-size:21px;line-height:1.4}
 .profile-detail-heading h3 small{font-size:12px;color:#d7e2cf}
@@ -265,7 +233,21 @@ dialog{width:min(590px,calc(100% - 40px));max-height:85svh;overflow:auto;padding
 .profile-detail blockquote p{font-size:15px;line-height:1.85;color:#3f5238}
 .profile-career-line{padding:0 22px 20px;font-size:12px;line-height:1.85;color:#5b6e4e;word-break:keep-all}
 .career-label{font-weight:600;color:#344c32;margin-right:9px}
+@media(min-width:801px){
+ .person-card .person-photo img{width:min(57.375%,222.75px)}
+ .person-card.kim-h .person-photo img{width:min(74.25%,288.75px)}
+ .person-card.kim-j .person-photo img{width:min(61.5%,240px)}
+}
 @media(max-width:800px){
+ .person-frame{height:auto;aspect-ratio:1/1.35;max-height:300px}
+ .person-card .person-photo:before{inset:30px 0 0}
+ .person-card .person-photo img{width:95.175%}
+ .person-card.kim-h .person-photo img{width:123%}
+ .person-card.kim-j .person-photo img{width:103.5%}
+ .person-card .person-info{height:46px;padding:8px;gap:3px}
+ .person-card .person-name{font-size:clamp(14px,3.65vw,20px)}
+ .person-card .person-role{font-size:clamp(9px,2.3vw,11px)}
+ .person-card .person-responsibility{font-size:clamp(8px,2.1vw,10px);margin-top:2px;letter-spacing:-.035em}
  .profile-detail-heading{padding:12px 18px;gap:12px}
  .profile-detail-heading h3{font-size:19px}
  .profile-detail-heading h3 small{font-size:11px;margin-left:5px}
@@ -275,7 +257,15 @@ dialog{width:min(590px,calc(100% - 40px));max-height:85svh;overflow:auto;padding
  .profile-career-line{padding:0 18px 17px;font-size:12px;line-height:1.8}
  .career-label{margin-right:6px}
 }
+@media(max-width:480px){
+ .person-card .person-info{height:38px;padding:8px 6px}
+ .person-card .person-responsibility{display:none}
+}
 @media(max-width:360px){
+ .person-card .person-info{padding:8px 5px}
+ .person-card .person-name{font-size:13px}
+ .person-card .person-role{font-size:9px}
+ .person-card .person-lead{display:none}
  .profile-detail-heading{padding:11px 14px}
  .profile-detail-heading h3{font-size:18px}
  .profile-context{font-size:10px}
