@@ -44,14 +44,15 @@
 
  const dates=window.InheritanceDeadlines,form=$('#deadline-form'),death=$('#death-date'),aware=$('#awareness-date'),different=$('#different-awareness'),lead=$('#lead-death');
  const cards=['deadline-civil','deadline-tax','deadline-acquisition'].map(id=>$('#'+id));
- const calculator=$('#deadline');
+ const calculator=$('#deadline'),calcNote=$('#deadline .calculator-note p'),calcDetails=$('#deadline-calculation-details');
+ const normalNote='2026·2027년 공휴일 반영. 개별 사정에 따라 달라질 수 있습니다.';
  const state=$('#deadline-state'),reference=$('#deadline-reference'),action=$('#deadline-action'),cta=$('#deadline-cta');
  const defaults=[['3개월','상속개시를 안 날 기준','기본 기한 · 날짜 입력 전'],['6개월','사망한 달의 말일 기준','일반적인 국내 거주자 기준'],['6개월','사망한 달의 말일 기준','상속등기 기한과 구별']];
  let lastCalculation=null,hasCalculated=false,autoDeathText=null,autoDeathSource=null;
  lead.addEventListener('input',()=>{autoDeathText=null;autoDeathSource=null;});
  function resetResults(stale){
-  calculator.classList.remove('has-result');calculator.classList.toggle('is-stale',stale);
-  cards.forEach((card,i)=>{card.classList.remove('is-urgent','is-ready','is-past');card.classList.toggle('is-pending',stale);$('.dday',card).textContent=stale?'—':defaults[i][0];$('.due-date',card).textContent=stale?'다시 계산해주세요':defaults[i][1];$('small',card).textContent=stale?'날짜 변경 · 재계산 전':defaults[i][2];});
+  calculator.classList.remove('has-result');calculator.classList.toggle('is-stale',stale);calcNote.textContent=normalNote;calcDetails.textContent='날짜를 계산하면 절차별 기본 날짜와 휴일 반영 여부를 여기에서 확인할 수 있습니다.';
+  cards.forEach((card,i)=>{card.classList.remove('is-urgent','is-ready','is-past','is-adjusted');card.classList.toggle('is-pending',stale);$('.dday',card).textContent=stale?'—':defaults[i][0];$('.due-date',card).textContent=stale?'다시 계산해주세요':defaults[i][1];$('small',card).textContent=stale?'날짜 변경 · 재계산 전':defaults[i][2];});
   reference.hidden=true;reference.textContent='';action.hidden=true;action.classList.remove('is-urgent');
  }
  function currentInput(){return {death:death.value,awareness:different.checked?aware.value:death.value};}
@@ -70,7 +71,9 @@
   event.preventDefault();$('#date-error').textContent='';
   try{
    const input=currentInput(),result=dates.calculate(input.death,input.awareness);
-   result.forEach((item,i)=>{const card=cards[i];card.classList.remove('is-urgent','is-ready','is-past','is-pending');card.classList.add(item.days<0?'is-past':item.days<=30?'is-urgent':'is-ready');$('.dday',card).textContent=item.days<0?'기한 경과':item.days===0?'D-DAY':'D-'+item.days;$('.due-date',card).textContent=item.date.replace(/-/g,'.');$('small',card).textContent=i===0?'상속개시를 안 날 + 3개월':i===1?'사망한 달 말일 + 6개월':'취득세 신고·납부 기준';});
+   result.forEach((item,i)=>{const card=cards[i];card.classList.remove('is-urgent','is-ready','is-past','is-pending');card.classList.toggle('is-adjusted',item.adjusted);card.classList.add(item.days<0?'is-past':item.days<=30?'is-urgent':'is-ready');$('.dday',card).textContent=item.days<0?'기한 경과':item.days===0?'D-DAY':'D-'+item.days;$('.due-date',card).textContent=item.date.replace(/-/g,'.');$('small',card).textContent=!item.holidayVerified?'휴일 미반영 기본 날짜':item.adjusted?'휴일 연장 반영':i===0?'상속개시를 안 날 + 3개월':i===1?'사망한 달 말일 + 6개월':'취득세 신고·납부 기준';});
+   calcNote.textContent=result.every(item=>item.holidayVerified)?normalNote:'휴일 미반영 기본 날짜입니다. 개별 기한은 확인이 필요합니다.';
+   const labels=['한정승인·상속포기','상속세','상속 부동산 취득세'];calcDetails.replaceChildren(...result.map((item,i)=>{const line=document.createElement('p');line.textContent=labels[i]+': 기본 '+item.baseDate.replace(/-/g,'.')+' / '+(item.holidayVerified?'휴일 반영 '+item.date.replace(/-/g,'.'):'공휴일 자료 범위 밖으로 기본 날짜만 표시');return line;}));
    const syncLead=!lead.value||(autoDeathText&&lead.value===autoDeathText);
    lastCalculation=input;hasCalculated=true;state.textContent='';reference.hidden=false;calculator.classList.add('has-result');calculator.classList.remove('is-stale');
    reference.textContent='사망일 '+input.death.replace(/-/g,'.')+(syncLead?' · 상담란에도 표시':' · 상담란 직접 입력 유지')+(input.awareness!==input.death?' · 상속개시를 안 날 '+input.awareness.replace(/-/g,'.'):'');

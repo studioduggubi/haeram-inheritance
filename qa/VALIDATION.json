@@ -1,8 +1,17 @@
 {
-  "revision": 8,
+  "revision": 9,
   "status": "passed",
-  "date": "2026-11-06T11:07:48.382914",
-  "scope": "All ten approved revised actions: reading flow, distinct section grouping, restrained consultation, mobile readability and trust fixes",
+  "date": "2026-11-06T12:10:44.210750",
+  "scope": [
+    "Fact-check calendar-month calculations; show holiday-adjusted dates separately from base dates",
+    "Replace visit/office-gallery section with a real-workspace trust scene and remote consultation wording"
+  ],
+  "deadline_unit_checks": 62,
+  "calendar_years": [
+    2026,
+    2027
+  ],
+  "calendar_checked_on": "2026-11-06",
   "viewports": [
     {
       "width": 375,
@@ -16,7 +25,7 @@
         "youtube": 507,
         "process": 452,
         "consult": 505,
-        "contact": 507
+        "contact": 509
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -33,7 +42,7 @@
         "youtube": 517,
         "process": 452,
         "consult": 505,
-        "contact": 507
+        "contact": 572
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -50,7 +59,7 @@
         "youtube": 591,
         "process": 513,
         "consult": 617,
-        "contact": 619
+        "contact": 632
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -67,7 +76,7 @@
         "youtube": 570,
         "process": 513,
         "consult": 617,
-        "contact": 632
+        "contact": 684
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -84,24 +93,7 @@
         "youtube": 511,
         "process": 429,
         "consult": 579,
-        "contact": 574
-      },
-      "default_sections_fit": true,
-      "horizontal_overflow": false
-    },
-    {
-      "width": 1440,
-      "height": 900,
-      "available": 716,
-      "sections": {
-        "home": 716,
-        "deadline": 635,
-        "situations": 675,
-        "team": 673,
-        "youtube": 712,
-        "process": 515,
-        "consult": 692,
-        "contact": 710
+        "contact": 584
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -118,7 +110,7 @@
         "youtube": 531,
         "process": 385,
         "consult": 535,
-        "contact": 486
+        "contact": 536
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -135,7 +127,7 @@
         "youtube": 575,
         "process": 429,
         "consult": 579,
-        "contact": 574
+        "contact": 584
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -152,7 +144,7 @@
         "youtube": 575,
         "process": 429,
         "consult": 579,
-        "contact": 574
+        "contact": 584
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
@@ -169,121 +161,109 @@
         "youtube": 467,
         "process": 385,
         "consult": 535,
-        "contact": 486
+        "contact": 536
+      },
+      "default_sections_fit": true,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "available": 716,
+      "sections": {
+        "home": 716,
+        "deadline": 635,
+        "situations": 675,
+        "team": 673,
+        "youtube": 712,
+        "process": 515,
+        "consult": 692,
+        "contact": 620
       },
       "default_sections_fit": true,
       "horizontal_overflow": false
     }
   ],
-  "expanded_detail_policy": "Original introductions, credentials, service comparison and six process steps expand naturally; no content clipping or wheel interception.",
-  "calculator": {
-    "date_edit_clears_stale_results": true,
-    "auto_copied_death_date_cleared_when_source_changes": true,
-    "manual_intake_date_preserved": true,
-    "visible_reference_matches_auto_or_manual_state": true,
-    "month_end_and_leap_reset_verified": true,
-    "future_dates_excluded": true,
-    "independent_awareness_date_verified": true,
-    "calculation_unit_checks": 12,
-    "result_viewports": [
-      {
-        "width": 1440,
-        "height": 900,
-        "available": 716,
-        "content": 715
-      },
-      {
-        "width": 1024,
-        "height": 768,
-        "available": 584,
-        "content": 583
-      },
-      {
-        "width": 430,
-        "height": 800,
-        "available": 632,
-        "content": 579
-      },
-      {
-        "width": 375,
-        "height": 667,
-        "available": 509,
-        "content": 501
-      }
-    ],
-    "stale_state_375_content": 502,
-    "past_state_375_content": 504
-  },
-  "profiles": {
-    "three_portraits_together": true,
-    "natural_aspect_ratios": true,
-    "original_messages": 3,
-    "original_credentials": 9,
-    "close_and_escape_restore_trigger_focus_and_team_position": true
-  },
-  "services": {
-    "five_tabs_verified": true,
-    "short_mobile_heights": [
-      509,
-      485,
-      509,
-      509,
-      509
-    ],
-    "comparison_preserved": true,
-    "one_common_quiet_consult_link": true,
-    "selected_concern_passed_to_form": true
-  },
-  "form": {
-    "six_original_fields_in_order": true,
-    "required": [
-      "name",
-      "phone",
-      "consent"
-    ],
-    "consent_prechecked": false,
-    "optional_hint_visible_on_mobile": true,
-    "typed_content_preserved_by_concern_picker": true,
-    "picker_escape_and_selection_close": true,
-    "blank_submit_blocked": true,
-    "backend_modified": false,
-    "new_live_lead_test_sent": false
-  },
-  "reading_sections_have_no_consult_cta": [
-    "team",
-    "youtube",
-    "process"
-  ],
-  "youtube": {
-    "official_videos": 2,
-    "no_autoplay_on_initial_load": true,
-    "selection_updates_title_topic_watch_link": true,
-    "actual_playback_verified": {
-      "video": "FYYGHho6B8s",
-      "paused": false,
-      "current_time_seconds": 29.75,
-      "ready_state": 4
+  "holiday_result_viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "available": 716,
+      "content": 715
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "available": 584,
+      "content": 583
+    },
+    {
+      "width": 430,
+      "height": 800,
+      "available": 632,
+      "content": 594
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "available": 509,
+      "content": 508
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "available": 536,
+      "content": 534
+    },
+    {
+      "width": 1024,
+      "height": 720,
+      "available": 536,
+      "content": 534
     }
+  ],
+  "verified_examples": [
+    {
+      "death": "2026-08-10",
+      "civil_base": "2026-11-10",
+      "civil_due": "2026-11-10",
+      "tax_base": "2027-02-28",
+      "tax_due": "2027-03-02"
+    },
+    {
+      "death": "2026-11-06",
+      "civil_base": "2027-02-06",
+      "civil_due": "2027-02-10",
+      "tax_base": "2027-05-31",
+      "tax_due": "2027-05-31"
+    }
+  ],
+  "ui_checks": {
+    "details_show_base_and_adjusted_dates": true,
+    "stale_badges_and_results_clear": true,
+    "manual_intake_date_preserved": true,
+    "awareness_changes_civil_only": true,
+    "unsupported_calendar_year_label_visible": true,
+    "no_visit_or_map_or_carousel_in_last_section": true,
+    "real_office_photo_and_remote_wording": true,
+    "no_extra_consultation_cta_in_trust_section": true
   },
-  "office": {
-    "real_photos": 5,
-    "thumbnails_verified": true,
-    "keyboard_track_verified": true,
-    "naver_map_preserved": true,
-    "naver_booking_links": 0
+  "preserved": {
+    "original_six_fields": true,
+    "intake_backend": true,
+    "three_profiles_and_original_messages": true,
+    "native_scroll": true,
+    "youtube": true
   },
+  "new_live_lead_test_sent": false,
   "screenshots": [
-    "haeram-v8-mobile-home.jpg",
-    "haeram-v8-mobile-services.jpg",
-    "haeram-v8-mobile-team.jpg",
-    "haeram-v8-mobile-form.jpg",
-    "haeram-v8-mobile-office.jpg",
-    "haeram-v8-desktop-overview.jpg"
+    "haeram-v9-trust-mobile.jpg",
+    "haeram-v9-trust-pc.jpg",
+    "haeram-v9-deadline-mobile.jpg"
   ],
   "limitations": [
-    "Responsive browser viewports were tested, not a physical iPhone.",
-    "No new real lead was submitted; the unchanged backend and field schema were compared with the previously verified version.",
-    "Advertising account attribution and actual conversion lift are not measured by this UI revision."
-  ],
-  "refinement": "Short desktop layouts use balanced video columns, bounded office photo heights and reduced surrounding whitespace; prose sizes unchanged."
+    "Responsive browser viewports, not a physical iPhone test",
+    "Holiday calendar currently verified for 2026 and 2027. Older/other years visibly show base dates only.",
+    "Individual extensions, special limited acceptance, foreign-residence rules and future temporary holidays require individual review."
+  ]
 }

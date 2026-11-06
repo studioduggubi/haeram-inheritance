@@ -1,5 +1,5 @@
 {
-  "revision": 8,
+  "revision": 9,
   "passed": true,
   "checks": {
     "unique_ids": true,
@@ -9,7 +9,7 @@
     "three_core_keywords": true,
     "no_incheon_or_booking_or_arrow_glyphs": true,
     "no_naver_booking_links": true,
-    "naver_map_preserved": true,
+    "no_map_or_visit_invitation": true,
     "original_statements_and_nine_credentials": true,
     "three_portraits_visible_together": true,
     "original_six_process_steps": true,
@@ -17,10 +17,15 @@
     "six_field_schema_preserved": true,
     "unchecked_required_consent": true,
     "intake_configuration_unchanged": true,
-    "backend_calculator_gallery_video_tracking_unchanged": true,
+    "backend_date_picker_profiles_video_tracking_unchanged": true,
     "no_consult_ctas_in_reading_sections": true,
     "one_service_consult_link": true,
-    "no_root_scroll_snap_or_wheel_interception": true
+    "no_root_scroll_snap_or_wheel_interception": true,
+    "trust_uses_real_office_photo": true,
+    "trust_has_no_carousel_or_cta": true,
+    "remote_consultation_explained": true,
+    "calendar_script_loads_before_engine": true,
+    "balanced_css_braces": true
   },
   "missing_references": []
 }
