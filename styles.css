@@ -205,7 +205,7 @@ dialog{width:min(590px,calc(100% - 40px));max-height:85svh;overflow:auto;padding
 
 /* Portrait, name and responsibility form one compact identity surface. */
 .person-card{border:1px solid #d2d9ca;border-radius:6px;overflow:hidden;background:var(--paper)}
-.person-frame{height:clamp(260px,min(28vw,38svh),350px);position:relative;isolation:isolate;overflow:hidden}
+.person-frame{width:100%;height:clamp(260px,min(28vw,38svh),350px);position:relative;isolation:isolate;overflow:hidden}
 .person-frame:after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,transparent 45%,#15251b00 50%,#15251be6 78%,#15251bfa 100%)}
 .person-card .person-photo{height:100%;aspect-ratio:auto}
 .person-card .person-photo:before{inset:0;border-radius:0}
