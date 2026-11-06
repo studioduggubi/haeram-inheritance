@@ -1,69 +1,72 @@
 {
-  "revision": 6,
+  "revision": 7,
   "status": "passed",
-  "date": "2026-11-06T02:15:36.191722",
-  "focus": [
-    "Original official-site introductions and all nine career credentials restored",
-    "All three portraits remain together; inline profile disclosure opens one panel and supports keyboard close with focus return",
-    "Manual five-photo office gallery with thumbnails, keyboard navigation and caption state",
-    "Native year/month/day controls replace calendar popups for death and awareness dates",
-    "Leap year, month-end clearing, future-date bounds, calculation and consultation-date transfer verified"
-  ],
+  "date": "2026-11-06T09:26:12.158561",
+  "scope": "Official inheritance YouTube player and selectable video list; Naver booking links excluded",
+  "video_count": 2,
+  "source_record": "private design/youtube-v7.json",
   "viewports": [
     {
       "width": 375,
       "height": 667,
-      "available": 505
+      "available": 505,
+      "content": 459
     },
     {
       "width": 430,
       "height": 730,
-      "available": 554
+      "available": 554,
+      "content": 454
     },
     {
       "width": 430,
       "height": 800,
-      "available": 624
+      "available": 624,
+      "content": 498
     },
     {
       "width": 393,
       "height": 852,
-      "available": 676
+      "available": 676,
+      "content": 490
     },
     {
       "width": 1024,
       "height": 768,
-      "available": 576
+      "available": 576,
+      "content": 469
     },
     {
       "width": 1440,
       "height": 900,
-      "available": 708
+      "available": 708,
+      "content": 593
     }
   ],
-  "initial_section_height_tolerance_px": 1,
-  "all_three_people_visible_on_mobile": true,
-  "portrait_aspect_ratio_tolerance": 0.001,
-  "concern_selection_and_calculator_date_transfer_verified": true,
+  "horizontal_overflow": false,
+  "long_title_mobile_state": {
+    "width": 375,
+    "height": 667,
+    "available": 505,
+    "content": 456,
+    "fits": true
+  },
+  "actual_playback_verified": {
+    "video": "f77E4Gz97pc",
+    "paused": false,
+    "current_time_seconds": 16.9,
+    "ready_state": 4
+  },
+  "no_autoplay_on_initial_load": true,
+  "selection_updates_title_topic_and_external_watch_link": true,
+  "mobile_focus_stays_on_visible_watch_control": true,
+  "mobile_menu_closes_and_navigates": true,
+  "naver_booking_links": 0,
+  "naver_map_preserved": true,
   "backend_modified": false,
   "new_live_lead_test_sent": false,
-  "previous_verified_backend_revision": 4,
   "screenshots": [
-    "haeram-v6-mobile-date.jpg",
-    "haeram-v6-mobile-team.jpg",
-    "haeram-v6-mobile-office.jpg",
-    "haeram-v6-pc-office.jpg"
-  ],
-  "profile_details_expand": true,
-  "office_photo_count": 5,
-  "native_calendar_inputs": 0,
-  "date_selection_checks": [
-    "2024-02-29 supported; changing year to 2025 clears day 29",
-    "August 31 changing to September clears invalid day",
-    "Current-year month and current-month day end at Korea today",
-    "Death 2026-08-31 calculates base dates 2026-11-30 and 2027-02-28",
-    "Later awareness 2026-10-01 changes civil date to 2027-01-01 while tax dates remain unchanged",
-    "Unchecking later awareness clears and disables its controls"
-  ],
-  "browser_verification": "Chrome responsive viewport checks; physical iPhone native picker not directly tested"
+    "haeram-v7-youtube-mobile.jpg",
+    "haeram-v7-youtube-pc.jpg"
+  ]
 }

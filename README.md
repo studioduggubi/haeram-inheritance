@@ -12,6 +12,7 @@
 - Success requires a confirmed server response with the matching request ID. The thank-you page requires a recent confirmed session receipt and does not emit a conversion for direct visits, test submissions or repeated reloads.
 - The official site's existing Naver common key and legacy `cnv` integration are retained. No form contents are passed to analytics. Advertising domain registration and report attribution require verification in the advertiser account.
 - Five actual office photographs can be browsed manually by thumbnails, swiping or the keyboard; visit information, map and consultation links accompany the gallery.
+- The official inheritance videos use an embedded player and selectable thumbnails; playback starts only after an explicit user action. No Naver booking links are included.
 - Main page is crawlable. The thank-you page remains excluded from indexing.
 
 Private backend sources, email feedback, generation originals and design records are excluded from this public repository. Real customer data and credentials must not be committed.

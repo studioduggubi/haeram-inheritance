@@ -1,13 +1,12 @@
 {
-  "revision": 6,
+  "revision": 7,
   "passed": true,
   "checks": [
-    "Unique IDs, valid local references and accessible control references",
-    "All three original statements and nine credentials match the official source, ignoring whitespace and hashtag prefixes",
-    "No arrow glyphs or Incheon copy",
-    "No native calendar inputs; six labeled year/month/day selects",
-    "Six consultation fields and required states preserved",
-    "No wheel or page touchmove interception; root has no snapping; gallery snapping is horizontal only",
-    "Existing calculator, intake backend and analytics implementations unchanged"
+    "Unique IDs and valid local assets/anchors",
+    "All images have intrinsic dimensions and alt attributes",
+    "Two verified official videos and one embed; no autoplay on initial load",
+    "No Naver booking links or booking buttons; office map retained",
+    "No arrow glyphs in site-owned UI",
+    "Calculator, consultation, privacy, expert profiles, office gallery and analytics scripts unchanged"
   ]
 }
