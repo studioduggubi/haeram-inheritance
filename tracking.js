@@ -1,12 +1,13 @@
 /* Existing official site's Naver common key and cnv integration retained for compatibility. */
 'use strict';
 (()=>{
- if(!['haeram-law.com','www.haeram-law.com','studioduggubi.github.io'].includes(location.hostname))return;
- if(location.hostname==='studioduggubi.github.io'&&!location.pathname.startsWith('/haeram-inheritance/'))return;
+ if(!['haeram-law.com','www.haeram-law.com'].includes(location.hostname))return;
+ function optedOut(){try{return localStorage.getItem('haeram-inheritance-analytics-optout')==='1'||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true;}catch(error){return navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true;}}
+ if(optedOut())return;
  window.wcs_add=window.wcs_add||{};window.wcs_add.wa='s_282e2b0947a8';
  const script=document.createElement('script');script.src='https://wcs.naver.net/wcslog.js';script.async=true;
- script.onload=()=>{if(!window.wcs)return;try{
-  window.wcs.inflow(location.hostname==='studioduggubi.github.io'?location.hostname+'/haeram-inheritance':location.hostname);
+ script.onload=()=>{if(optedOut()||!window.wcs)return;try{
+  window.wcs.inflow(location.hostname);
   let receipt=null;
   if(location.pathname.endsWith('/thank-you.html')){try{receipt=JSON.parse(sessionStorage.getItem('haeram-inheritance-receipt')||'null');}catch(error){}}
   const valid=receipt&&!receipt.isTest&&/^[0-9a-f-]{36}$/.test(receipt.leadId)&&Number.isFinite(receipt.confirmedAt)&&Date.now()-receipt.confirmedAt>=0&&Date.now()-receipt.confirmedAt<=1800000&&!sessionStorage.getItem('haeram-conversion-'+receipt.leadId);

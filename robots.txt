@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /thank-you.html
+Disallow: /backend/
+Disallow: /design/
+Disallow: /qa/
+Disallow: /.git/
 Sitemap: https://haeram-law.com/sitemap.xml

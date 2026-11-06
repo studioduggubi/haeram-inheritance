@@ -15,12 +15,13 @@
   const button=form.querySelector('[type=submit]');submitting=true;button.disabled=true;button.textContent='상담 신청을 보내고 있습니다…';
   try{
    if(!requestId)requestId=newId();
+   document.dispatchEvent(new CustomEvent('haeram:submit-attempt'));
    const payload=new URLSearchParams({service:'inheritance',request_id:requestId,name:String(data.get('name')).trim(),phone,area:String(data.get('area')||'').trim(),relationship:String(data.get('relationship')||'').trim(),deceased_at:String(data.get('deceased_at')||'').trim(),content:String(data.get('content')||'').trim(),consent:'true',consent_version:config.consentVersion,website:String(data.get('website')||''),started_at:String(startedAt)});
    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),25000);let response;
    try{response=await fetch(config.endpoint,{method:'POST',body:payload,redirect:'follow',signal:controller.signal});}finally{clearTimeout(timer);}
    const result=await response.json();if(!response.ok||!result.ok||result.leadId!==requestId)throw new Error(result.code||'NOT_RECORDED');
-   try{sessionStorage.setItem('haeram-inheritance-receipt',JSON.stringify({leadId:requestId,confirmedAt:Date.now(),isTest:phone==='01000000000'}));location.assign('thank-you.html');return;}catch(storageError){/* Inline confirmation remains available when storage is blocked. */}document.getElementById('success-phone').textContent=phone.slice(0,3)+'-****-'+phone.slice(-4);form.hidden=true;const success=document.getElementById('intake-success');success.hidden=false;success.querySelector('h3').focus({preventScroll:true});
-  }catch(err){error.textContent='접수 결과를 확인하지 못했습니다. 입력 내용은 그대로입니다. 다시 신청하거나 0507-1414-6860으로 연락해주세요.';button.disabled=false;button.textContent='무료 상담 다시 신청';}
+   try{sessionStorage.setItem('haeram-inheritance-receipt',JSON.stringify({leadId:requestId,confirmedAt:Date.now(),isTest:phone==='01000000000'}));location.assign('thank-you.html');return;}catch(storageError){/* Inline confirmation remains available when storage is blocked. */}document.dispatchEvent(new CustomEvent('haeram:lead-confirmed',{detail:{leadId:requestId,confirmedAt:Date.now(),isTest:phone==='01000000000'}}));document.getElementById('success-phone').textContent=phone.slice(0,3)+'-****-'+phone.slice(-4);form.hidden=true;const success=document.getElementById('intake-success');success.hidden=false;success.querySelector('h3').focus({preventScroll:true});
+  }catch(err){document.dispatchEvent(new CustomEvent('haeram:submit-error'));error.textContent='접수 결과를 확인하지 못했습니다. 입력 내용은 그대로입니다. 다시 신청하거나 0507-1414-6860으로 연락해주세요.';button.disabled=false;button.textContent='무료 상담 다시 신청';}
   finally{submitting=false;}
  });
 })();
