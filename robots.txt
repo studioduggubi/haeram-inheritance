@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you.html
-Sitemap: https://studioduggubi.github.io/haeram-inheritance/sitemap.xml
+Sitemap: https://haeram-law.com/sitemap.xml
