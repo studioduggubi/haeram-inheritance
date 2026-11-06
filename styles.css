@@ -202,3 +202,41 @@ dialog{width:min(590px,calc(100% - 40px));max-height:85svh;overflow:auto;padding
 }
 
 @media(max-width:800px) and (max-height:740px){.video-list{margin-top:10px}.video-choice{padding-top:8px;padding-bottom:8px}}
+
+/* Portrait, name and responsibility form one compact identity surface. */
+.person-card{border:1px solid #d2d9ca;border-radius:6px;overflow:hidden;background:var(--paper)}
+.person-frame{height:clamp(260px,min(28vw,38svh),350px);position:relative;isolation:isolate;overflow:hidden}
+.person-frame:after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,transparent 45%,#15251b00 50%,#15251be6 78%,#15251bfa 100%)}
+.person-card .person-photo{height:100%;aspect-ratio:auto}
+.person-card .person-photo:before{inset:0;border-radius:0}
+.person-card .person-photo img{top:8px;transform:translate(-50%,-1.5228%)}
+.person-card.kim-h .person-photo img{top:8px;transform:translate(-50%,-5.2246%)}
+.person-card.kim-j .person-photo img{top:8px;transform:translate(-50%,-2.9188%)}
+.person-card .person-info{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:16px 18px;text-align:left;color:#fffdf5}
+.person-card .person-info h3{font-size:25px;line-height:1.35;color:#fffdf5}
+.person-card .person-info h3 small{display:inline;font-size:13px;line-height:1.5;font-weight:400;margin-left:9px;color:#e0e8d9}
+.person-card .person-responsibility{font-size:14px;line-height:1.6;color:#dde5d4;margin-top:6px;white-space:normal}
+.person-card>.profile-toggle{display:flex;width:100%;min-height:40px;justify-content:center;margin:0;padding:8px;border:0;border-top:1px solid #d2d9ca;border-radius:0;background:var(--paper);color:#3d5735;font-size:13px;font-weight:500;line-height:1.5}
+.person-card>.profile-toggle:hover{background:#eaf0e3;color:#263f26}
+.person-card>.profile-toggle[aria-expanded=true]{background:var(--forest);color:#fffdf5;border-top-color:#63725c}
+@media(min-width:801px){
+ .person-card .person-photo img{width:min(85%,330px)}
+ .person-card.kim-h .person-photo img{width:min(99%,385px)}
+ .person-card.kim-j .person-photo img{width:min(82%,320px)}
+}
+@media(max-width:800px){
+ .person-frame:after{background:linear-gradient(180deg,transparent 30%,#15251b00 35%,#15251bf0 68%,#15251bfa 100%)}
+ .person-frame{height:auto;aspect-ratio:1/1.9;max-height:300px}
+ .person-card .person-info{padding:11px 10px}
+ .person-card .person-info h3{font-size:20px;line-height:1.35}
+ .person-card .person-info h3 small{display:block;font-size:11px;line-height:1.5;margin:3px 0 0}
+ .person-card .person-responsibility{font-size:11px;line-height:1.5;margin-top:4px;letter-spacing:-.035em}
+ .person-card>.profile-toggle{min-height:36px;padding:7px 3px;font-size:12px}
+ .profile-details:has(.profile-detail:not([hidden])){margin-top:16px}
+}
+@media(max-width:360px){
+ .person-card .person-info{padding:9px 7px}
+ .person-card .person-info h3{font-size:18px}
+ .person-card .person-responsibility{font-size:10px}
+ .person-card>.profile-toggle{font-size:11px}
+}
