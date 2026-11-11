@@ -9,7 +9,8 @@
  const optKey='haeram-inheritance-analytics-optout';let volatileOptOut=false,started=false;
  const read=k=>{try{return localStorage.getItem(k);}catch(e){return null;}};
  const disabled=()=>volatileOptOut||read(optKey)==='1'||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true;
- const safeLocation=()=>{const u=new URL(location.href),out=new URL(u.origin+u.pathname);for(const k of ['utm_source','utm_medium','utm_campaign','utm_content','utm_id','gclid','wbraid','gbraid']){const v=u.searchParams.get(k);if(v&&v.length<=180&&!/@|\b0\d{8,10}\b/.test(v))out.searchParams.set(k,v);}return out.href;};
+ const paidTerms=new Set(["한정승인","한정승인법무사","한정승인상담","한정승인신청","한정승인비용","상속한정승인","상속포기","상속포기법무사","상속포기상담","상속포기신청","상속포기비용","상속포기절차","상속등기","상속등기법무사","상속등기상담","상속등기신청","상속등기비용","상속등기서류"]);
+ const safeLocation=()=>{const u=new URL(location.href),out=new URL(u.origin+u.pathname);for(const k of ['utm_source','utm_medium','utm_campaign','utm_content','utm_id','gclid','wbraid','gbraid']){const v=u.searchParams.get(k);if(v&&v.length<=180&&!/@|\b0\d{8,10}\b/.test(v))out.searchParams.set(k,v);}const term=u.searchParams.get('utm_term');if(u.searchParams.get('utm_source')==='naver'&&u.searchParams.get('utm_medium')==='cpc'&&u.searchParams.get('utm_campaign')==='haeram_inheritance_search'&&paidTerms.has(term))out.searchParams.set('utm_term',term);return out.href;};
  const safeReferrer=()=>{try{return document.referrer?new URL(document.referrer).origin+'/':'';}catch(e){return '';}};
  const button=document.getElementById('analytics-optout'),status=document.getElementById('analytics-choice');
  function showChoice(){if(button)button.textContent=disabled()?'방문 통계 사용하기':'방문 통계 사용 안 함';if(status)status.textContent=disabled()?'현재 이 브라우저에서 방문 통계를 수집하지 않습니다.':'현재 이 브라우저에서 방문 통계를 수집합니다.';}
