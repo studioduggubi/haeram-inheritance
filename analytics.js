@@ -30,7 +30,12 @@
  document.addEventListener('haeram:submit-attempt',()=>event('consult_submit',{method:'form'}));
  document.addEventListener('haeram:submit-error',()=>event('consult_error',{method:'form'}));
  const calculator=document.getElementById('deadline-form');if(calculator)calculator.addEventListener('submit',()=>setTimeout(()=>{const r=document.getElementById('deadline-civil');if(r&&/\d{4}\.\d{2}\.\d{2}/.test(r.textContent))event('deadline_calculate',{});},0));
- const form=document.getElementById('inheritance-form');if(form)form.addEventListener('focusin',()=>mark('form_start',{method:'form'}));
+ const form=document.getElementById('inheritance-form');if(form){
+  form.addEventListener('focusin',()=>mark('form_start',{method:'form'}));
+  // Only the completed step is measured. Phone values remain inside this handler.
+  const contactReady=e=>{const input=e.target;if(!input||input.name!=='phone')return;const digits=String(input.value||'').replace(/\D/g,'');if(/^0\d{8,10}$/.test(digits)&&digits!=='01000000000')mark('contact_field_complete',{method:'form'});};
+  for(const type of ['change','focusout'])form.addEventListener(type,contactReady);
+ }
  document.addEventListener('click',e=>{
   const a=e.target.closest('a');if(a){const href=a.getAttribute('href')||'',where=placement(a);if(href.startsWith('tel:'))event('contact_click',{contact_method:'phone',placement:where});else if(/^https:\/\/pf\.kakao\.com\//.test(href))event('contact_click',{contact_method:'kakao',placement:where});else if(href==='#consult'||href==='./#consult')event('consult_open',{placement:where});else if(/^https:\/\/(www\.)?youtube\.com\//.test(href))event('video_outbound',{placement:where});}
   const service=e.target.closest('[role=tab][id^=tab-]');if(service){const type=service.id.replace('tab-','');if(['limited','renounce','property','tax','family'].includes(type))event('service_select',{service_type:type});}
