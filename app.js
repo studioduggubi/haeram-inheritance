@@ -79,8 +79,8 @@
    lastCalculation=input;hasCalculated=true;state.textContent='';reference.hidden=false;calculator.classList.add('has-result');calculator.classList.remove('is-stale');
    reference.textContent='사망일 '+input.death.replace(/-/g,'.')+(syncLead?' · 상담란에도 표시':' · 상담란 직접 입력 유지')+(input.awareness!==input.death?' · 상속개시를 안 날 '+input.awareness.replace(/-/g,'.'):'');
    const civil=result[0];action.hidden=false;action.classList.toggle('is-urgent',civil.days>=0&&civil.days<=30);
-   if(civil.days<0){$('#deadline-message').textContent='기본 기한이 지났습니다. 예외 여부를 확인해야 합니다.';cta.href='tel:050714146860';cta.textContent='전화상담';}
-   else if(civil.days<=30){$('#deadline-message').textContent='기한이 얼마 남지 않았습니다. 급한 상황은 전화로 알려주세요.';cta.href='tel:050714146860';cta.textContent='전화상담';}
+   if(civil.days<0){$('#deadline-message').textContent='기본 기한이 지났습니다. 예외 여부를 확인해야 합니다.';cta.href='tel:050713426860';cta.textContent='전화상담';}
+   else if(civil.days<=30){$('#deadline-message').textContent='기한이 얼마 남지 않았습니다. 급한 상황은 전화로 알려주세요.';cta.href='tel:050713426860';cta.textContent='전화상담';}
    else{$('#deadline-message').textContent='필요한 절차와 준비할 내용을 살펴보세요.';cta.href='#situations';cta.textContent='상속 업무 보기';}
    if(syncLead){autoDeathText=input.death.replace(/-/g,'.');autoDeathSource=input.death;lead.value=autoDeathText;}
   }catch(error){resetResults(hasCalculated);lastCalculation=null;$('#date-error').textContent=error.message;}
